@@ -1,0 +1,195 @@
+/* Global CSS */
+/* @import "~react-image-gallery/styles/css/image-gallery.css"; */
+/* Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: #FE7A36
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: Arial, sans-serif; /* Change font to Arial with fallback to sans-serif */
+}
+
+a:link,
+a:visited,
+button {
+  background-color: rgba(0, 0, 255, 0.3);
+  color: white;
+  padding: 20px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color change */
+  font-weight: bold; /* Make text bold */
+  border-radius: 20px; /* Add rounded corners to buttons */
+}
+
+a:hover,
+button:hover {
+  background-color: rgba(0, 0, 255, 0.6); /* New color on hover */
+  color: yellow; /* New color on hover */
+}
+
+button[disabled] {
+  background-color: #ccc; /* Disabled button color */
+  color: #666; /* Text color for disabled button */
+  cursor: not-allowed; /* Change cursor for disabled button */
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px; /* Add padding to the navbar */
+  border-bottom: 1px solid #ddd; /* Add a bottom border to the navbar */
+}
+
+/* Center elements */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Top right corner button */
+.btn-top-right-corner {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: rgba(238, 17, 17, 0.6);
+  color: rgb(252, 251, 251);
+  padding: 10px; /* Add padding to the button */
+  border-radius: 0 0 0 5px; /* Add rounded corner to the top left */
+}
+
+/* Table styles */
+.shift-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.shift-table th,
+.shift-table td {
+  border: 1px solid #0a0000;
+  padding: 8px;
+}
+
+.shift-table th {
+  text-align: left;
+  background-color: #051afb;
+  color: white; /* Change text color to white */
+}
+
+.shift-table tr:hover {
+  background-color: #010008;
+}
+
+.white-text {
+  color: white;
+}
+
+/* Image and text container styles */
+.content {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Large text styles */
+.barbeRoomClient,
+.barbeRoomBarber {
+  font-size: 3rem; /* Adjust the font size */
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Grid container styles */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact button styles */
+.contact-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.email-button,
+.call-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.email-button:hover,
+.call-button:hover {
+  background-color: #0056b3;
+}
+
+.email-button span,
+.call-button span {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0; /* Adjust padding as needed */
+  background-color: #000000;  
+}
+
+.cancel-button {
+  margin-left: 50px; /* Adjust the value as needed */
+}
+
+input {
+  padding: 10px; /* Add padding to the input */
+  border-radius: 20px; /* Add rounded corners to the input */
+}
+
+.label-right {
+  display: flex;
+  justify-content: center;
+}
